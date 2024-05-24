@@ -1,0 +1,26 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _express = _interopRequireDefault(require("express"));
+
+var _admin = require("../controllers/admin.controller");
+
+var _auth = require("../controllers/auth.controller");
+
+var _auth2 = require("../middlewares/Auth/auth");
+
+var router = _express["default"].Router();
+
+router.post("/admin-login", _auth.loginHandler, _auth.loginAdmin);
+router.post("/patient-login", _auth.loginHandler, _auth.loginPatient);
+router.post("/register-patient", _auth.registerPatient);
+router.get("/profile", _auth2.userAuth, _admin.myProfile);
+var _default = router;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZlci9yb3V0ZXMvYXV0aC5yb3V0ZXMuanMiXSwibmFtZXMiOlsicm91dGVyIiwiZXhwcmVzcyIsIlJvdXRlciIsInBvc3QiLCJsb2dpbkhhbmRsZXIiLCJsb2dpbkFkbWluIiwibG9naW5QYXRpZW50IiwicmVnaXN0ZXJQYXRpZW50IiwiZ2V0IiwidXNlckF1dGgiLCJteVByb2ZpbGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBOztBQUNBOztBQUNBOztBQU9BOztBQUVBLElBQU1BLE1BQU0sR0FBR0Msb0JBQVFDLE1BQVIsRUFBZjs7QUFFQUYsTUFBTSxDQUFDRyxJQUFQLENBQVksY0FBWixFQUE0QkMsa0JBQTVCLEVBQTBDQyxnQkFBMUM7QUFFQUwsTUFBTSxDQUFDRyxJQUFQLENBQVksZ0JBQVosRUFBOEJDLGtCQUE5QixFQUE0Q0Usa0JBQTVDO0FBRUFOLE1BQU0sQ0FBQ0csSUFBUCxDQUFZLG1CQUFaLEVBQWlDSSxxQkFBakM7QUFFQVAsTUFBTSxDQUFDUSxHQUFQLENBQVcsVUFBWCxFQUF1QkMsZUFBdkIsRUFBaUNDLGdCQUFqQztlQUVlVixNIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cHJlc3MgZnJvbSBcImV4cHJlc3NcIjtcbmltcG9ydCB7IG15UHJvZmlsZSB9IGZyb20gXCIuLi9jb250cm9sbGVycy9hZG1pbi5jb250cm9sbGVyXCI7XG5pbXBvcnQge1xuICBhZG1pbkxvZ2luLFxuICBsb2dpbkFkbWluLFxuICBsb2dpbkhhbmRsZXIsXG4gIGxvZ2luUGF0aWVudCxcbiAgcmVnaXN0ZXJQYXRpZW50LFxufSBmcm9tIFwiLi4vY29udHJvbGxlcnMvYXV0aC5jb250cm9sbGVyXCI7XG5pbXBvcnQgeyB1c2VyQXV0aCB9IGZyb20gXCIuLi9taWRkbGV3YXJlcy9BdXRoL2F1dGhcIjtcblxuY29uc3Qgcm91dGVyID0gZXhwcmVzcy5Sb3V0ZXIoKTtcblxucm91dGVyLnBvc3QoXCIvYWRtaW4tbG9naW5cIiwgbG9naW5IYW5kbGVyLCBsb2dpbkFkbWluKTtcblxucm91dGVyLnBvc3QoXCIvcGF0aWVudC1sb2dpblwiLCBsb2dpbkhhbmRsZXIsIGxvZ2luUGF0aWVudCk7XG5cbnJvdXRlci5wb3N0KFwiL3JlZ2lzdGVyLXBhdGllbnRcIiwgcmVnaXN0ZXJQYXRpZW50KTtcblxucm91dGVyLmdldChcIi9wcm9maWxlXCIsIHVzZXJBdXRoLCBteVByb2ZpbGUpO1xuXG5leHBvcnQgZGVmYXVsdCByb3V0ZXI7XG4iXX0=

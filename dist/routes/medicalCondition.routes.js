@@ -1,0 +1,21 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _express = _interopRequireDefault(require("express"));
+
+var _auth = require("../middlewares/Auth/auth");
+
+var _medicalCondition = require("../controllers/medicalCondition.controller");
+
+var router = _express["default"].Router();
+
+router.route("/medical-condition").get(_auth.userAuth, _medicalCondition.getMedicalCondition).put(_auth.userAuth, _medicalCondition.createMedicalCondition);
+var _default = router;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZlci9yb3V0ZXMvbWVkaWNhbENvbmRpdGlvbi5yb3V0ZXMuanMiXSwibmFtZXMiOlsicm91dGVyIiwiZXhwcmVzcyIsIlJvdXRlciIsInJvdXRlIiwiZ2V0IiwidXNlckF1dGgiLCJnZXRNZWRpY2FsQ29uZGl0aW9uIiwicHV0IiwiY3JlYXRlTWVkaWNhbENvbmRpdGlvbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBTUEsSUFBTUEsTUFBTSxHQUFHQyxvQkFBUUMsTUFBUixFQUFmOztBQUNBRixNQUFNLENBQ0hHLEtBREgsQ0FDUyxvQkFEVCxFQUVHQyxHQUZILENBRU9DLGNBRlAsRUFFaUJDLHFDQUZqQixFQUdHQyxHQUhILENBR09GLGNBSFAsRUFHaUJHLHdDQUhqQjtlQUtlUixNIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cHJlc3MgZnJvbSBcImV4cHJlc3NcIjtcbmltcG9ydCB7IHVzZXJBdXRoIH0gZnJvbSBcIi4uL21pZGRsZXdhcmVzL0F1dGgvYXV0aFwiO1xuaW1wb3J0IHtcbiAgY3JlYXRlTWVkaWNhbENvbmRpdGlvbixcbiAgZ2V0TWVkaWNhbENvbmRpdGlvbixcbiAgdXBkYXRlTWVkaWNhbENvbmRpdGlvbixcbn0gZnJvbSBcIi4uL2NvbnRyb2xsZXJzL21lZGljYWxDb25kaXRpb24uY29udHJvbGxlclwiO1xuXG5jb25zdCByb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpO1xucm91dGVyXG4gIC5yb3V0ZShcIi9tZWRpY2FsLWNvbmRpdGlvblwiKVxuICAuZ2V0KHVzZXJBdXRoLCBnZXRNZWRpY2FsQ29uZGl0aW9uKVxuICAucHV0KHVzZXJBdXRoLCBjcmVhdGVNZWRpY2FsQ29uZGl0aW9uKTtcblxuZXhwb3J0IGRlZmF1bHQgcm91dGVyO1xuIl19

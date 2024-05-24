@@ -1,0 +1,25 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _express = _interopRequireDefault(require("express"));
+
+var _admin = require("../controllers/admin.controller");
+
+var _patient = require("../controllers/patient.controller");
+
+var _auth = require("../middlewares/Auth/auth");
+
+var router = _express["default"].Router();
+
+router.get("/my-profile", _auth.userAuth, _admin.myProfile);
+router.patch("/update-personal-details", _auth.userAuth, _patient.updateUser);
+router.get("/my-details", _auth.userAuth, _patient.myDetails);
+var _default = router;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZlci9yb3V0ZXMvcGF0aWVudC5yb3V0ZXMuanMiXSwibmFtZXMiOlsicm91dGVyIiwiZXhwcmVzcyIsIlJvdXRlciIsImdldCIsInVzZXJBdXRoIiwibXlQcm9maWxlIiwicGF0Y2giLCJ1cGRhdGVVc2VyIiwibXlEZXRhaWxzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFFQSxJQUFNQSxNQUFNLEdBQUdDLG9CQUFRQyxNQUFSLEVBQWY7O0FBRUFGLE1BQU0sQ0FBQ0csR0FBUCxDQUFXLGFBQVgsRUFBMEJDLGNBQTFCLEVBQW9DQyxnQkFBcEM7QUFFQUwsTUFBTSxDQUFDTSxLQUFQLENBQWEsMEJBQWIsRUFBeUNGLGNBQXpDLEVBQW1ERyxtQkFBbkQ7QUFFQVAsTUFBTSxDQUFDRyxHQUFQLENBQVcsYUFBWCxFQUEwQkMsY0FBMUIsRUFBb0NJLGtCQUFwQztlQUVlUixNIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cHJlc3MgZnJvbSBcImV4cHJlc3NcIjtcbmltcG9ydCB7IG15UHJvZmlsZSB9IGZyb20gXCIuLi9jb250cm9sbGVycy9hZG1pbi5jb250cm9sbGVyXCI7XG5pbXBvcnQgeyBteURldGFpbHMsIHVwZGF0ZVVzZXIgfSBmcm9tIFwiLi4vY29udHJvbGxlcnMvcGF0aWVudC5jb250cm9sbGVyXCI7XG5pbXBvcnQgeyB1c2VyQXV0aCB9IGZyb20gXCIuLi9taWRkbGV3YXJlcy9BdXRoL2F1dGhcIjtcblxuY29uc3Qgcm91dGVyID0gZXhwcmVzcy5Sb3V0ZXIoKTtcblxucm91dGVyLmdldChcIi9teS1wcm9maWxlXCIsIHVzZXJBdXRoLCBteVByb2ZpbGUpO1xuXG5yb3V0ZXIucGF0Y2goXCIvdXBkYXRlLXBlcnNvbmFsLWRldGFpbHNcIiwgdXNlckF1dGgsIHVwZGF0ZVVzZXIpO1xuXG5yb3V0ZXIuZ2V0KFwiL215LWRldGFpbHNcIiwgdXNlckF1dGgsIG15RGV0YWlscyk7XG5cbmV4cG9ydCBkZWZhdWx0IHJvdXRlcjtcbiJdfQ==

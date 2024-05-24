@@ -1,0 +1,23 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _dotenv = _interopRequireDefault(require("dotenv"));
+
+_dotenv["default"].config({
+  path: "server/.env"
+});
+
+var config = {
+  MONGO_URI: process.env.MONGO_URI,
+  JWT_SECRET: process.env.JWT_SECRET,
+  JWT_EXPIRE_TIME: process.env.JWT_EXPIRE_TIME
+};
+var _default = config;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZlci9jb25maWcvaW5kZXguanMiXSwibmFtZXMiOlsiZG90ZW52IiwiY29uZmlnIiwicGF0aCIsIk1PTkdPX1VSSSIsInByb2Nlc3MiLCJlbnYiLCJKV1RfU0VDUkVUIiwiSldUX0VYUElSRV9USU1FIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTs7QUFFQUEsbUJBQU9DLE1BQVAsQ0FBYztBQUFFQyxFQUFBQSxJQUFJLEVBQUU7QUFBUixDQUFkOztBQUVBLElBQU1ELE1BQU0sR0FBRztBQUNiRSxFQUFBQSxTQUFTLEVBQUVDLE9BQU8sQ0FBQ0MsR0FBUixDQUFZRixTQURWO0FBRWJHLEVBQUFBLFVBQVUsRUFBRUYsT0FBTyxDQUFDQyxHQUFSLENBQVlDLFVBRlg7QUFHYkMsRUFBQUEsZUFBZSxFQUFFSCxPQUFPLENBQUNDLEdBQVIsQ0FBWUU7QUFIaEIsQ0FBZjtlQU1lTixNIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGRvdGVudiBmcm9tIFwiZG90ZW52XCI7XG5cbmRvdGVudi5jb25maWcoeyBwYXRoOiBcInNlcnZlci8uZW52XCIgfSk7XG5cbmNvbnN0IGNvbmZpZyA9IHtcbiAgTU9OR09fVVJJOiBwcm9jZXNzLmVudi5NT05HT19VUkksXG4gIEpXVF9TRUNSRVQ6IHByb2Nlc3MuZW52LkpXVF9TRUNSRVQsXG4gIEpXVF9FWFBJUkVfVElNRTogcHJvY2Vzcy5lbnYuSldUX0VYUElSRV9USU1FLFxufTtcblxuZXhwb3J0IGRlZmF1bHQgY29uZmlnO1xuIl19
